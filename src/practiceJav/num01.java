@@ -1,40 +1,52 @@
 package practiceJav;
 
-import java.io.*;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class num01 {
 
-	public static void main(String[] args) throws IOException {
-		// 3개의 숫자로 고정 크기 -> 배열 사용
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
 		
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		
-		int ans = 0;
-		int n1 = Integer.parseInt(br.readLine());
-		int n2 = Integer.parseInt(br.readLine());
-		int n3 = Integer.parseInt(br.readLine());
-		br.close();
-		
-		
-		if(n1>n2) {
-			if(n2>n3) {
-				ans = n1;
-			} else if(n1>n3) {
-				ans = n1;
-			} else {
-				ans = n3;
+		int[] arr = new int[3];
+		int n1= sc.nextInt();
+		int n2= sc.nextInt();
+		int n3= sc.nextInt();
+
+		if(n1>n2){
+			if(n2>n3){
+				arr[0]=n1;
+				arr[1]=n2;
+				arr[2]=n3;
+			} else if(n1>n3){
+				arr[0]=n1;
+				arr[1]=n3;
+				arr[2]=n2;
+			} else{
+				arr[0]=n3;
+				arr[1]=n1;
+				arr[2]=n2;
 			}
-		} else if(n2>n3) {
-			ans=n2;
-		} else {
-			ans=n3;
+		} else if(n1>n3){
+			arr[0]=n2;
+			arr[1]=n1;
+			arr[2]=n3;
+		} else if(n2>n3){
+			arr[0]=n2;
+			arr[1]=n3;
+			arr[2]=n1;
+		} else{
+			arr[0]=n3;
+			arr[1]=n2;
+			arr[2]=n1;
+	}
+
+		for(int i=0;i<arr.length;i++){
+			System.out.println(arr[i]);
 		}
-		
-		bw.write(ans);
-		bw.flush();
-		bw.close();
-		
+
+		System.out.println(Arrays.toString(arr));
 	}
 
 }

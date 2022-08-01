@@ -10,11 +10,11 @@ public class num09 {
         int x = sc.nextInt();
         int y = sc.nextInt();
 
-        if(s.equals('+')){
+        if(s.equals("+")){
             System.out.println(x+y);
-        } else if (s.equals('-')){
+        } else if (s.equals("-")){
             System.out.println(x-y);
-        } else if (s.equals('*')){
+        } else if (s.equals("*")){
             System.out.println(x*y);
         } else{
             if(y!=0){
