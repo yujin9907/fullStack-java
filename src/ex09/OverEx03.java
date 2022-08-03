@@ -1,5 +1,6 @@
 package ex09;
 
+
 class Zealot{
 	int power = 5;
 	int hp = 100;
