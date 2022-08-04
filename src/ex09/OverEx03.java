@@ -12,6 +12,8 @@ class Dragoon{
 class River{
 	int power = 50;
 	int hp = 100;
+	
+	
 }
 
 // 리버가 추가됨 그럼 메서드 +4 개
